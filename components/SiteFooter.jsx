@@ -8,6 +8,8 @@ export default function SiteFooter() {
                 <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
                     {/* Legal Entity & Authority */}
                     <div className="col-span-2 space-y-3">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/brand/logo-mark.png" alt="" width={495} height={300} className="h-12 w-auto" />
                         <div className="flex flex-col">
                             <span className="text-xl font-black text-white tracking-tight uppercase">{SITE.legalName}</span>
                             <span className="text-xs font-mono font-bold text-sky-400 mt-0.5">MC# {SITE.mcNumber}</span>
