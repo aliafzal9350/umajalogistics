@@ -124,6 +124,7 @@ export default function HomePage() {
                     name: SITE.legalName,
                     alternateName: SITE.name,
                     url: SITE.url,
+                    logo: `${SITE.url}/logo.png`,
                     description: SITE.description,
                     email: SITE.emails.dispatch,
                     telephone: '+1-646-973-6672',
