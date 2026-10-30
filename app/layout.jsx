@@ -18,9 +18,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preload" href="/models/truck.glb" as="fetch" crossOrigin="anonymous" />
-      </head>
       <body>
         {children}
         <Analytics />
