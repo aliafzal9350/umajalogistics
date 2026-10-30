@@ -17,6 +17,11 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
+# Optional: override the AdSense publisher ID in lib/site.js at build time:
+#   docker build --build-arg NEXT_PUBLIC_ADSENSE_CLIENT=ca-pub-XXXXXXXXXXXXXXXX .
+ARG NEXT_PUBLIC_ADSENSE_CLIENT
+ENV NEXT_PUBLIC_ADSENSE_CLIENT=$NEXT_PUBLIC_ADSENSE_CLIENT
+
 RUN npm run build
 
 # Stage 3: Production minimal runtime
