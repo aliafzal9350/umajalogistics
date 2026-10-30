@@ -1,13 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
-}
 
 html {
   scroll-behavior: smooth;
@@ -15,7 +8,7 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: #080C10;
   color: #F8FAFC;
   overflow-x: hidden;
@@ -63,4 +56,126 @@ body {
   background-image: radial-gradient(circle at 50% 25%, rgba(56, 189, 248, 0.07) 0%, transparent 60%),
                     radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 100% 100%, 32px 32px;
+}
+
+/* Long-form reading content: articles and policy pages */
+.prose-content {
+  color: #CBD5E1;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (min-width: 640px) {
+  .prose-content {
+    font-size: 1.0625rem;
+  }
+}
+
+.prose-content > * + * {
+  margin-top: 1.1em;
+}
+
+.prose-content h2 {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-top: 2.2em;
+}
+
+.prose-content h3 {
+  color: #F1F5F9;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 1.8em;
+}
+
+.prose-content h2 + *,
+.prose-content h3 + * {
+  margin-top: 0.6em;
+}
+
+.prose-content a {
+  color: #38BDF8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-content a:hover {
+  color: #7DD3FC;
+}
+
+.prose-content strong {
+  color: #F8FAFC;
+  font-weight: 700;
+}
+
+.prose-content ul,
+.prose-content ol {
+  padding-left: 1.4em;
+}
+
+.prose-content ul {
+  list-style: disc;
+}
+
+.prose-content ol {
+  list-style: decimal;
+}
+
+.prose-content li + li {
+  margin-top: 0.45em;
+}
+
+.prose-content li::marker {
+  color: #38BDF8;
+}
+
+.prose-content hr {
+  border-color: rgba(255, 255, 255, 0.08);
+  margin-top: 2.5em;
+  margin-bottom: 1.5em;
+}
+
+.prose-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  display: block;
+  overflow-x: auto;
+}
+
+.prose-content th,
+.prose-content td {
+  text-align: left;
+  padding: 0.6em 0.8em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  vertical-align: top;
+}
+
+.prose-content th {
+  color: #F8FAFC;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.prose-content .callout {
+  padding: 1.1em 1.3em;
+  border-radius: 1rem;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.prose-content .callout-title {
+  color: #38BDF8;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.prose-content .callout ul {
+  margin-top: 0.6em;
 }
