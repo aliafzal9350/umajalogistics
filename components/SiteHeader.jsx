@@ -67,12 +67,22 @@ export default function SiteHeader() {
             <header className="bg-[#080C10]/85 backdrop-blur-xl sticky top-0 z-50 border-b border-white/[0.06]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 sm:h-20 flex items-center justify-between">
                     {/* Typographic Wordmark */}
-                    <Link href="/" className="flex flex-col group" aria-label={`${SITE.name} home`}>
-                        <span className="text-lg sm:text-2xl font-black tracking-tight text-white leading-none uppercase group-hover:text-sky-400 transition-colors">
-                            UMAJA LOGISTICS
-                        </span>
-                        <span className="text-[9px] sm:text-[10px] font-mono font-bold tracking-widest text-sky-400 mt-1 uppercase">
-                            LLC • MC# {SITE.mcNumber}
+                    <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0" aria-label={`${SITE.name} home`}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            src="/brand/logo-mark.png"
+                            alt=""
+                            width={495}
+                            height={300}
+                            className="hidden min-[350px]:block h-6 min-[380px]:h-7 sm:h-11 w-auto flex-shrink-0"
+                        />
+                        <span className="flex flex-col min-w-0">
+                            <span className="text-[15px] min-[380px]:text-base sm:text-2xl font-black tracking-tight text-white leading-none uppercase whitespace-nowrap group-hover:text-sky-400 transition-colors">
+                                UMAJA LOGISTICS
+                            </span>
+                            <span className="text-[9px] sm:text-[10px] font-mono font-bold tracking-widest text-sky-400 mt-1 uppercase whitespace-nowrap">
+                                LLC • MC# {SITE.mcNumber}
+                            </span>
                         </span>
                     </Link>
 
@@ -91,7 +101,7 @@ export default function SiteHeader() {
                     </nav>
 
                     {/* Right Hand Actions */}
-                    <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
                         <a
                             href={SITE.phones.primary.href}
                             className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold text-slate-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] transition"
@@ -101,9 +111,10 @@ export default function SiteHeader() {
                         </a>
                         <Link
                             href="/contact#quote"
-                            className="bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-black uppercase tracking-wider px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl transition shadow-lg shadow-sky-500/20 hover:shadow-sky-500/35 flex items-center gap-1.5"
+                            className="bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-black uppercase tracking-wider px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl transition shadow-lg shadow-sky-500/20 hover:shadow-sky-500/35 flex items-center gap-1.5"
                         >
-                            <span>Get a Quote</span>
+                            <span className="sm:hidden">Quote</span>
+                            <span className="hidden sm:inline">Get a Quote</span>
                             <ChevronRight className="w-3.5 h-3.5" />
                         </Link>
 
