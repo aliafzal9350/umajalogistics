@@ -100,6 +100,38 @@ export default function SiteFooter() {
                         <span>DOCK HIGH & LIFTGATE</span>
                     </div>
                 </div>
+
+                {/* Attribution required by the 3D model's Creative Commons licence */}
+                <p className="text-[11px] text-slate-500 text-center sm:text-left">
+                    3D truck model:{' '}
+                    <a
+                        href="https://sketchfab.com/3d-models/2003-gmc-topkick-c6500-9fcaf568e14f4921a85be14caf8dc98a"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-slate-300"
+                    >
+                        “2003 GMC TopKick C6500”
+                    </a>{' '}
+                    by{' '}
+                    <a
+                        href="https://sketchfab.com/ddiaz-design"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-slate-300"
+                    >
+                        Ddiaz Design
+                    </a>
+                    , licensed under{' '}
+                    <a
+                        href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-slate-300"
+                    >
+                        CC BY-NC-SA 4.0
+                    </a>
+                    . Modified with Umaja Logistics lettering and artwork.
+                </p>
             </div>
         </footer>
     );

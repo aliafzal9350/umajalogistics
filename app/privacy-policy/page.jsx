@@ -65,8 +65,9 @@ export default function PrivacyPolicyPage() {
                         </li>
                     </ul>
                     <p>
-                        We do not use our own cookies to track you. Fonts and the 3D truck viewer are served from our own domain and
-                        do not set cookies.
+                        We do not use our own cookies to track you. The Site’s fonts are served from our own domain. The interactive
+                        3D truck viewer on the home page loads font files for its lettering from the jsDelivr content delivery
+                        network, which receives your IP address and browser information in order to deliver those files.
                     </p>
 
                     <h2>3. How we use information</h2>

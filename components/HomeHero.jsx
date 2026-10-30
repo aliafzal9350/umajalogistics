@@ -45,8 +45,8 @@ export default function HomeHero() {
             id="hero"
             className="relative w-full overflow-hidden lg:flex lg:flex-col lg:justify-between lg:h-[calc(100vh-104px)] lg:min-h-[520px] lg:max-h-[840px] lg:py-3"
         >
-            {/* Desktop 3D viewport, to the right of the headline */}
-            <div className="hidden lg:block absolute inset-y-0 right-0 left-[36%] z-0">
+            {/* Desktop Background 3D Viewport Layer */}
+            <div className="hidden lg:block absolute inset-0 z-0">
                 {isDesktop && <TruckCanvas activePreset={activePreset} />}
             </div>
 

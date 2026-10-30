@@ -115,6 +115,8 @@ const STEPS = [
 export default function HomePage() {
     return (
         <>
+            {/* Start downloading the 3D truck early; only the home page needs it. */}
+            <link rel="preload" href="/models/truck.glb" as="fetch" crossOrigin="anonymous" />
             <JsonLd
                 data={{
                     '@context': 'https://schema.org',

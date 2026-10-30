@@ -21,7 +21,7 @@ npm run build && npm start
 | `app/resources` + `content/articles/` | Shipping guides. Add a file to `content/articles/` and register it in `content/articles/index.js`. |
 | `app/{privacy-policy,terms,disclaimer}` | Legal pages. Update `SITE.policiesUpdated` in `lib/site.js` when they change. |
 | `app/ads.txt`, `app/robots.js`, `app/sitemap.js` | Crawler files, generated at build time |
-| `components/TruckCanvas.jsx` | Original 3D truck built from three.js primitives (no third-party model) |
+| `components/TruckCanvas.jsx` + `public/models/truck.glb` | Interactive 3D truck viewer. The model is "2003 GMC TopKick C6500" by Ddiaz Design (Sketchfab), licensed CC-BY-NC-SA-4.0. |
 
 ## Google AdSense setup
 

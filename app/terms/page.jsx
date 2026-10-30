@@ -62,8 +62,9 @@ export default function TermsPage() {
 
                     <h2>4. Intellectual property</h2>
                     <p>
-                        The Site and its content, including text, guides, graphics, the 3D truck model, logos and the “Umaja
-                        Logistics” name, are owned by or licensed to {SITE.legalName} and are protected by intellectual property laws.
+                        The Site and its content, including text, guides, graphics, logos and the “Umaja Logistics” name, are owned
+                        by or licensed to {SITE.legalName} and are protected by intellectual property laws. Third-party materials
+                        remain the property of their respective owners.
                         You may view, print and share pages for your personal or internal business use with attribution. You may not
                         republish, sell or create derivative works from Site content without our written permission.
                     </p>
