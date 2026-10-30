@@ -25,21 +25,21 @@ npm run build && npm start
 
 ## Google AdSense setup
 
-The AdSense script, the `google-adsense-account` meta tag and `/ads.txt` are generated from one environment variable.
-Nothing AdSense-related is output until it is set.
+The AdSense script, the `google-adsense-account` meta tag and `/ads.txt` are generated from the publisher ID in
+`lib/site.js` (`ca-pub-1895109224491741`). To use a different ID without editing code, set the
+`NEXT_PUBLIC_ADSENSE_CLIENT` environment variable in Vercel (or `--build-arg` for Docker) and redeploy; it is read at
+build time.
 
-1. In Vercel → Project → Settings → Environment Variables, add
-   `NEXT_PUBLIC_ADSENSE_CLIENT` = your publisher ID, e.g. `ca-pub-1234567890123456` (Production and Preview).
-   For Docker, pass `--build-arg NEXT_PUBLIC_ADSENSE_CLIENT=...`.
-2. Redeploy. The value is read at build time.
-3. Check that <https://umajalogistics.online/ads.txt> shows
-   `google.com, pub-…, DIRECT, f08c47fec0942fa0`, and that the page source contains `adsbygoogle.js?client=ca-pub-…`.
-4. In AdSense → Sites, add `umajalogistics.online` and request review.
-5. In AdSense → Privacy & messaging, publish the **European regulations** (GDPR consent) message and the
+1. Deploy the site.
+2. Check that <https://umajalogistics.online/ads.txt> shows
+   `google.com, pub-1895109224491741, DIRECT, f08c47fec0942fa0`, and that the page source contains
+   `adsbygoogle.js?client=ca-pub-1895109224491741`.
+3. In AdSense → Sites, add `umajalogistics.online` and request review.
+4. In AdSense → Privacy & messaging, publish the **European regulations** (GDPR consent) message and the
    **US state regulations** message. The privacy policy states that EEA/UK/Swiss visitors are asked for consent,
    so this step is required.
-6. After approval, turn on **Auto ads** for the site. No ad units are hard-coded in the pages.
-7. Submit `https://umajalogistics.online/sitemap.xml` in Google Search Console.
+5. After approval, turn on **Auto ads** for the site. No ad units are hard-coded in the pages.
+6. Submit `https://umajalogistics.online/sitemap.xml` in Google Search Console.
 
 ### Keep it compliant
 
