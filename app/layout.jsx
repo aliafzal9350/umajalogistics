@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
-import { SITE, ADSENSE_CLIENT } from '@/lib/site';
+import { SITE, ADSENSE_CLIENT, ADSENSE_ADS_ENABLED } from '@/lib/site';
 
 // Self-hosted at build time by next/font, so visitors' browsers never request Google Fonts.
 const jakarta = Plus_Jakarta_Sans({
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={jakarta.variable}>
       <head>
-        {ADSENSE_CLIENT && (
+        {ADSENSE_CLIENT && ADSENSE_ADS_ENABLED && (
           // Plain <script> (not next/script) so the AdSense site-verification crawler sees it in the server HTML.
           <script
             async

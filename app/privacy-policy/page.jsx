@@ -16,8 +16,7 @@ export default function PrivacyPolicyPage() {
                     <p>
                         This Privacy Policy explains how {SITE.legalName} (“{SITE.name},” “we,” “us” or “our”) collects, uses,
                         shares and protects information when you visit {SITE.url.replace('https://', '')} (the “Site”) or contact
-                        us through it. By using the Site, you agree to the practices described here. If you do not agree, please do
-                        not use the Site.
+                        us through it. This policy explains our practices; it does not replace any consent required for advertising technology.
                     </p>
 
                     <h2>1. Who we are</h2>
@@ -78,8 +77,8 @@ export default function PrivacyPolicyPage() {
 
                     <h2>4. Advertising and Google AdSense</h2>
                     <p>
-                        We use Google AdSense, an advertising service provided by Google LLC, to display ads on the Site. In
-                        connection with this:
+                        The Site is configured for Google AdSense ownership verification. Advertising requests are enabled
+                        separately after account and consent setup. If Google AdSense ads are displayed on the Site:
                     </p>
                     <ul>
                         <li>
@@ -128,11 +127,11 @@ export default function PrivacyPolicyPage() {
 
                     <h3>Visitors in the EEA, the UK and Switzerland</h3>
                     <p>
-                        Where the law requires consent before advertising cookies are used, you will be shown a consent message from a
-                        Google-certified consent management platform when you visit the Site. You can accept or reject personalized
-                        advertising, and you can change or withdraw your choice at any time through the same consent tool. If you do
-                        not consent, Google may show non-personalized or limited ads, which still use cookies or identifiers for
-                        purposes such as frequency capping, aggregated reporting and fraud prevention, where permitted by law.
+                        Google requires a certified consent management platform for relevant advertising to visitors in the EEA,
+                        the UK and Switzerland. Where a consent message is presented, use its controls to accept, reject or manage
+                        the available purposes and to change your choice. Non-personalized ads may still involve cookies or
+                        identifiers; choosing them is not the same as disabling all storage. Contact us if consent controls are
+                        unavailable or you have questions about advertising on this site.
                     </p>
 
                     <h2>5. Managing cookies</h2>

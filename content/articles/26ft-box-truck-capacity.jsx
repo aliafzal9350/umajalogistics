@@ -112,7 +112,8 @@ export default function Article() {
             <p>
                 Every truck has a Gross Vehicle Weight Rating (GVWR), the maximum the loaded truck may weigh. Payload is
                 simply GVWR minus the truck’s own empty weight. Many 26ft box trucks are built at or just under 26,000 lbs
-                GVWR, which is also the line above which a single vehicle requires a Class B commercial driver’s license.
+                GVWR, but CDL requirements depend on vehicle or combination ratings and use, including passenger and
+                hazardous-material rules. Check the <a href="https://www.fmcsa.dot.gov/registration/commercial-drivers-license/drivers" target="_blank" rel="noopener noreferrer">FMCSA license classifications</a> rather than relying on box length alone.
                 After the weight of the chassis, body and liftgate, typical payload lands around 10,000 to 12,000 lbs.
             </p>
             <p>

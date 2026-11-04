@@ -67,6 +67,7 @@ export default function ArticlePage({ params }) {
                     <time dateTime={article.published}>{formatDate(article.published)}</time>
                     <span className="text-slate-600">•</span>
                     <span>{article.readingMinutes} min read</span>
+                    {article.updated && article.updated !== article.published ? <span>Updated <time dateTime={article.updated}>{formatDate(article.updated)}</time></span> : null}
                 </p>
             </PageHeader>
 

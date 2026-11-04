@@ -12,6 +12,7 @@ const PAGES = [
     { path: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
     { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },
     { path: '/disclaimer', priority: 0.3, changeFrequency: 'yearly' },
+    { path: '/editorial-policy', priority: 0.3, changeFrequency: 'yearly' },
 ];
 
 export default function sitemap() {

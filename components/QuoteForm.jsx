@@ -50,7 +50,7 @@ export default function QuoteForm() {
             <div className="flex items-center justify-between mb-5 gap-3">
                 <div>
                     <h3 className="text-lg sm:text-xl font-black text-white uppercase">Rapid Rate Confirmation</h3>
-                    <p className="text-sm text-slate-400 mt-0.5">Direct carrier quote dispatched within 15 minutes.</p>
+                    <p className="text-sm text-slate-400 mt-0.5">Send your shipment details for an availability and rate check.</p>
                 </div>
                 <span className="bg-sky-500/10 border border-sky-500/20 text-sky-400 px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold flex-shrink-0">
                     24/7 STATUS
