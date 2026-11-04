@@ -1,13 +1,10 @@
+import { pageMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import ContactSection from '@/components/ContactSection';
 import { SITE, mailto } from '@/lib/site';
 
-export const metadata = {
-    title: 'Contact & Get a Quote',
-    description: `Call ${SITE.phones.primary.display} or email ${SITE.emails.dispatch} for box truck quotes, JFK air cargo runs, carrier packets and rate confirmations. MC# ${SITE.mcNumber}.`,
-    alternates: { canonical: '/contact' },
-};
+export const metadata = pageMetadata('Contact & Get a Quote', 'Request a box truck freight quote, carrier packet or JFK cargo run. Call Umaja dispatch at (646) 973-6672.', '/contact');
 
 export default function ContactPage() {
     return (

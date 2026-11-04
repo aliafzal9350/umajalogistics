@@ -1,12 +1,9 @@
+import { pageMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
-    title: 'Terms of Use',
-    description: 'The terms that govern use of the Umaja Logistics LLC website, including quotes, content, advertising and limitations of liability.',
-    alternates: { canonical: '/terms' },
-};
+export const metadata = pageMetadata('Terms of Use', 'Terms for using the Umaja Logistics website, requesting freight quotes and reading our shipping resources.', '/terms');
 
 export default function TermsPage() {
     return (

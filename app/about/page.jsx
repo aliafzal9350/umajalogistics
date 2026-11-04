@@ -1,14 +1,10 @@
+import { pageMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import { ShieldCheck, Truck, FileCheck2, Phone } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import { SITE, mailto } from '@/lib/site';
 
-export const metadata = {
-    title: 'About Us',
-    description:
-        'Umaja Logistics LLC is a small, direct motor carrier (MC# 1508261) running 26ft dock-high box trucks with Maxon liftgates for expedited freight and daily JFK air cargo runs.',
-    alternates: { canonical: '/about' },
-};
+export const metadata = pageMetadata('About Us', 'Meet Umaja Logistics LLC, a box truck carrier serving shippers with expedited freight, liftgate delivery and JFK cargo runs.', '/about');
 
 const VALUES = [
     {

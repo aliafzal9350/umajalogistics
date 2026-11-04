@@ -1,13 +1,9 @@
+import { pageMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
-    title: 'Privacy Policy',
-    description:
-        'How Umaja Logistics LLC collects, uses and protects information on umajalogistics.online, including cookies, Google AdSense advertising, analytics and your privacy choices.',
-    alternates: { canonical: '/privacy-policy' },
-};
+export const metadata = pageMetadata('Privacy Policy', 'How Umaja Logistics handles website data, freight inquiries, analytics and advertising information.', '/privacy-policy');
 
 const ext = { target: '_blank', rel: 'noopener noreferrer' };
 

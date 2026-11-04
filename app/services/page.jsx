@@ -1,13 +1,9 @@
+import { pageMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import { Clock, Plane, Layers, Warehouse, Anchor, CheckCircle2 } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
-export const metadata = {
-    title: 'Freight Services',
-    description:
-        'Expedited and dedicated box truck runs, JFK air cargo trucking, liftgate deliveries, dock-to-dock freight and TWIC port moves from Umaja Logistics.',
-    alternates: { canonical: '/services' },
-};
+export const metadata = pageMetadata('Freight Services', 'Expedited box truck freight, liftgate deliveries, dock-to-dock transport and JFK air cargo runs. Contact Umaja dispatch for a quote.', '/services');
 
 const SERVICES = [
     {

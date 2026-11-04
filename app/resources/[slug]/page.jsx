@@ -5,6 +5,7 @@ import ArticleCard from '@/components/ArticleCard';
 import JsonLd from '@/components/JsonLd';
 import { ARTICLES, getArticle, formatDate } from '@/content/articles';
 import { SITE } from '@/lib/site';
+import { ARTICLE_SEO, pageMetadata } from '@/lib/metadata';
 
 export const dynamicParams = false;
 
@@ -16,15 +17,12 @@ export function generateMetadata({ params }) {
     const article = getArticle(params.slug);
     if (!article) return {};
     const url = `/resources/${article.slug}`;
+    const [title, description] = ARTICLE_SEO[article.slug] ?? [article.title, article.description];
+    const metadata = pageMetadata(title, description, url, 'article');
     return {
-        title: article.title,
-        description: article.description,
-        alternates: { canonical: url },
+        ...metadata,
         openGraph: {
-            type: 'article',
-            title: article.title,
-            description: article.description,
-            url,
+            ...metadata.openGraph,
             publishedTime: article.published,
             modifiedTime: article.updated ?? article.published,
         },
@@ -49,6 +47,7 @@ export default function ArticlePage({ params }) {
                     datePublished: article.published,
                     dateModified: article.updated ?? article.published,
                     mainEntityOfPage: `${SITE.url}/resources/${article.slug}`,
+                    image: `${SITE.url}/opengraph-image.png`,
                     author: { '@type': 'Organization', name: SITE.legalName, url: SITE.url },
                     publisher: { '@type': 'Organization', name: SITE.legalName, url: SITE.url },
                 }}

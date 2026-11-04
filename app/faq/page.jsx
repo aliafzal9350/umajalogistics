@@ -1,14 +1,10 @@
+import { pageMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
-    title: 'Frequently Asked Questions',
-    description:
-        'Answers about Umaja Logistics box truck capacity, liftgate service, JFK air cargo runs, insurance, credentials, quotes, tracking and proof of delivery.',
-    alternates: { canonical: '/faq' },
-};
+export const metadata = pageMetadata('Freight Shipping FAQ', 'Answers about box truck capacity, liftgate deliveries, booking, freight paperwork and airport pickup preparation.', '/faq');
 
 const FAQ_GROUPS = [
     {

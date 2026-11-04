@@ -16,11 +16,11 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: 'Umaja Logistics | 26ft Box Truck & Expedited Freight Carrier',
+    default: 'Umaja Logistics | Box Truck & Expedited Freight',
     template: `%s | ${SITE.name}`,
   },
   description:
-    'Commercial 26ft dock-high straight box transport with heavy-duty Maxon liftgate. Expedited operations all over USA, with dedicated daily JFK Airport corridors. MC# 1508261.',
+    '26ft dock-high box truck freight with liftgate service. Nationwide expedited runs and JFK air cargo trucking. Call (646) 973-6672 for a quote.',
   applicationName: SITE.name,
   openGraph: {
     title: SITE.legalName,

@@ -1,13 +1,9 @@
+import { pageMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
-    title: 'Disclaimer',
-    description:
-        'General information, advertising and external link disclaimers for the Umaja Logistics website and its shipping guides.',
-    alternates: { canonical: '/disclaimer' },
-};
+export const metadata = pageMetadata('Disclaimer', 'How to use the general freight information, equipment examples and external references on the Umaja Logistics website.', '/disclaimer');
 
 export default function DisclaimerPage() {
     return (

@@ -6,6 +6,7 @@ export const meta = {
     description:
         'Pallet math, payload limits, cube and liftgate ratings for a 26ft straight box truck, plus the details dispatch needs to quote your load correctly.',
     published: '2026-10-30',
+    updated: '2026-11-04',
     readingMinutes: 7,
     category: 'Equipment',
 };
@@ -13,6 +14,7 @@ export const meta = {
 export default function Article() {
     return (
         <>
+            <p>For an editable floor-space estimate, use the <Link href="/tools/pallet-calculator">box truck pallet calculator</Link>. Confirm actual equipment limits with dispatch before booking.</p>
             <p>
                 The 26ft straight box truck is the workhorse of regional and expedited freight. It is big enough to carry a
                 meaningful load of pallets, small enough to reach city storefronts and tight receiving areas, and, with a
@@ -117,7 +119,7 @@ export default function Article() {
                 We plan our trucks around a payload of 10,000+ lbs. That changes the pallet question quickly:
             </p>
             <ul>
-                <li>12 pallets at 800 lbs each = 9,600 lbs: fits.</li>
+                <li>12 pallets at 800 lbs each = 9,600 lbs: below an example 10,000-lb payload limit; dispatch must still confirm fit and distribution.</li>
                 <li>12 pallets at 1,200 lbs each = 14,400 lbs: does not fit, even though the floor has space.</li>
                 <li>8 pallets at 1,250 lbs each = 10,000 lbs: right at the limit, so accurate weights matter.</li>
             </ul>
@@ -139,8 +141,7 @@ export default function Article() {
             <p>
                 When there is no dock, every pallet goes up or down on the liftgate. Our trucks run Maxon hydraulic liftgates
                 rated at 3,300+ lbs, and everything on the platform counts toward that rating: the pallet, the pallet jack
-                and the person operating it. A 2,500-lb pallet is fine; a 3,800-lb crate is not a liftgate move, no matter how
-                much room is left in the box.
+                and the person operating it. The actual platform dimensions, load placement and total platform load must all be checked. A pallet that fits inside the box is not automatically suitable for the liftgate.
             </p>
             <p>
                 The pallet also has to fit on the platform and be movable with a hand pallet jack, which needs open entry on
