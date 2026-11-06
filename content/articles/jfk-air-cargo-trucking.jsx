@@ -6,7 +6,8 @@ export const meta = {
     description:
         'How export deliveries, import recoveries and transfers work at JFK Airport cargo terminals, what paperwork and security steps apply, and how to avoid delays.',
     published: '2026-10-30',
-    readingMinutes: 8,
+    updated: '2026-11-06',
+    readingMinutes: 10,
     category: 'Air Cargo',
 };
 
@@ -140,6 +141,57 @@ export default function Article() {
                 </li>
             </ol>
 
+            <h2>Build a dispatch packet before requesting airport recovery</h2>
+            <p>
+                A flight arrival notice is a starting point, not a complete pickup instruction. Put the details for one
+                recovery into one message so the forwarder, dispatcher and driver are working from the same version.
+                Identify the airline, the ground handler, the cargo building and the air waybill reference. If a master
+                and house air waybill are both relevant, explain which reference the handler uses. Keep a person available
+                to answer questions while the truck is being planned.
+            </p>
+            <p>
+                Separate the questions “has the flight arrived?”, “has the handler made the freight available?” and “is the
+                shipment authorized for collection?” Ask the responsible forwarder or handler to confirm the applicable
+                release conditions and any outstanding charges or holds. A driver cannot remove a hold simply by arriving
+                at the building. Avoid sending sensitive commercial documents through a public form; agree a suitable
+                method directly with dispatch when documentation is needed.
+            </p>
+            <ul>
+                <li>Airline, handler, building, pickup reference and shipment contact.</li>
+                <li>Current availability and release confirmation, including who supplied it and when.</li>
+                <li>Piece count, loaded dimensions and gross weight of each pallet or crate.</li>
+                <li>Pickup authorization details and the receiving facility’s instructions.</li>
+                <li>Delivery address, appointment window, unloading equipment and a reachable receiver.</li>
+                <li>Who can approve a revised plan if the cargo, timing or delivery conditions change.</li>
+            </ul>
+            <h2>Check the exact facility rather than the airport name</h2>
+            <p>
+                JFK has multiple cargo facilities. An airline’s general address, passenger terminal and freight pickup
+                point are not interchangeable. For example, the official <a href="https://www.aacargo.com/AACargo/ua/facilities/JFK" target="_blank" rel="noopener noreferrer">American Airlines Cargo JFK facility page</a> separates
+                cargo and parcel facilities and distinguishes pickup from drop-off information. Use the handler’s current
+                instructions for the service being booked. Do not reuse a saved building number or opening time without
+                checking it for the actual shipment.
+            </p>
+            <p>
+                Share the location of the truck entrance, the check-in procedure and any appointment reference with the
+                carrier. A receiving window should include a time zone and the contact who confirmed it. Terminal operating
+                hours alone do not guarantee that a particular shipment is ready or that a truck will finish loading before
+                closing. Dispatch needs both the facility constraints and a realistic delivery plan before accepting a run.
+            </p>
+            <h2>A release-delay example</h2>
+            <p>
+                Imagine three wrapped pallets arriving in the morning for delivery to a storefront that closes at 4 p.m.
+                The flight lands on time, but the handler has not confirmed availability. Booking the truck against the
+                flight time alone creates an uncertain collection and a receiving deadline that may no longer work.
+                Ask for confirmation of availability first, then have dispatch check the recovery window, the trip and the
+                receiver’s unloading arrangements together. This is an illustrative planning scenario, not a shipment record.
+            </p>
+            <p>
+                If availability changes after a truck has been accepted, notify dispatch immediately. Ask what waiting,
+                rescheduling or return charges would apply under the written agreement, and confirm who can authorize them.
+                Contact the receiver before promising a new arrival time. A revised delivery window, another collection
+                slot or a different unloading arrangement may be needed; none should be assumed from the original quote.
+            </p>
             <h2>At the dock: count, inspect, document</h2>
             <p>
                 When freight is recovered, the driver counts pieces against the paperwork and inspects them for visible damage.
