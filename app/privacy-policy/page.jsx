@@ -54,6 +54,13 @@ export default function PrivacyPolicyPage() {
                             browser, rather than profiles of individual visitors.
                         </li>
                         <li>
+                            <strong>Google measurement.</strong> We use Google Tag Manager to load our configured Google
+                            Analytics tag. Google Analytics may process page addresses, referrers, browser and device
+                            information, approximate location and interactions, and may use cookies or identifiers according
+                            to the tag and consent settings. We do not send quote-form fields to Google Analytics. See{' '}
+                            <a href="https://policies.google.com/technologies/partner-sites" {...ext}>how Google uses information from sites using its services</a>.
+                        </li>
+                        <li>
                             <strong>Advertising cookies and identifiers.</strong> If advertising is shown on the Site, Google and its
                             partners may collect information through cookies, web beacons and similar technologies, as described in
                             Section 4.
