@@ -51,13 +51,15 @@ export default function QuoteForm({ prepareOnly = false }) {
     const update = (field) => (e) =>
         setFormData({ ...formData, [field]: e.target.type === 'checkbox' ? e.target.checked : e.target.value });
 
+    const openEmailDraft = () => {
+        trackQuoteAction('quote_email_clicked');
+        window.location.href = buildQuoteEmail(formData);
+    };
+
     // This site has no backend: submitting opens the visitor's email app with the request pre-filled.
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        if (!prepareOnly) {
-            trackQuoteAction('quote_email_clicked');
-            window.location.href = buildQuoteEmail(formData);
-        }
+        if (!prepareOnly) openEmailDraft();
         setCopyMessage('');
         setIsSubmitted(true);
     };
@@ -107,7 +109,7 @@ export default function QuoteForm({ prepareOnly = false }) {
                     <textarea aria-label="Shipment brief" readOnly rows={7} value={buildBrief(formData)} className={inputClass} />
                     <div className="flex flex-wrap gap-3">
                         <button type="button" onClick={copyBrief} className="rounded-lg bg-sky-500 px-4 py-2 text-sm font-bold text-slate-950">Copy brief</button>
-                        <a href={buildQuoteEmail(formData)} onClick={() => trackQuoteAction('quote_email_clicked')} className="rounded-lg border border-white/20 px-4 py-2 text-sm font-bold text-sky-300">Open email draft</a>
+                        <button type="button" onClick={openEmailDraft} className="rounded-lg border border-white/20 px-4 py-2 text-sm font-bold text-sky-300">Open email draft</button>
                     </div>
                     <button
                         type="button"
