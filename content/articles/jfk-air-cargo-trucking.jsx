@@ -208,7 +208,7 @@ export default function Article() {
             </p>
             <p>
                 Moving freight to or from JFK? <Link href="/contact">Send us your air waybill details</Link> or read more about
-                our <Link href="/services#air-cargo">airport cargo service</Link>.
+                our <Link href="/services/jfk-air-cargo-trucking">JFK airport cargo service</Link>.
             </p>
         </>
     );

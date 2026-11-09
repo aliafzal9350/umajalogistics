@@ -11,29 +11,42 @@ const INITIAL_FORM = {
     cargo: '',
     contact: '',
     liftgate: true,
+    dimensions: '',
+    windows: '',
     notes: '',
 };
 
-function buildQuoteEmail(form) {
-    const lines = [
+function buildBrief(form) {
+    return [
         `Origin: ${form.origin}`,
         `Destination: ${form.destination}`,
         `Pallets / weight: ${form.cargo}`,
+        form.dimensions ? `Loaded dimensions: ${form.dimensions}` : null,
+        form.windows ? `Pickup / delivery windows: ${form.windows}` : null,
         `Liftgate & pallet jack required: ${form.liftgate ? 'Yes' : 'No'}`,
-        `Contact: ${form.contact}`,
+        form.contact ? `Contact: ${form.contact}` : null,
         form.notes ? `Notes: ${form.notes}` : null,
-    ].filter(Boolean);
+    ].filter(Boolean).join('\n');
+}
+
+function buildQuoteEmail(form) {
     const subject = `Freight Quote Request: ${form.origin} to ${form.destination}`;
-    return `mailto:${SITE.emails.dispatch}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+    return `mailto:${SITE.emails.dispatch}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(buildBrief(form))}`;
+}
+
+function trackQuoteAction(event) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event });
 }
 
 const inputClass =
     'w-full bg-black/40 border border-white/[0.08] rounded-xl px-3.5 py-3 sm:py-2.5 text-base sm:text-sm text-white placeholder:text-slate-500 focus:border-sky-400 outline-none transition';
 
-export default function QuoteForm() {
+export default function QuoteForm({ prepareOnly = false }) {
     const id = useId();
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [formData, setFormData] = useState(INITIAL_FORM);
+    const [formData, setFormData] = useState({ ...INITIAL_FORM, liftgate: !prepareOnly });
+    const [copyMessage, setCopyMessage] = useState('');
 
     const update = (field) => (e) =>
         setFormData({ ...formData, [field]: e.target.type === 'checkbox' ? e.target.checked : e.target.value });
@@ -41,40 +54,61 @@ export default function QuoteForm() {
     // This site has no backend: submitting opens the visitor's email app with the request pre-filled.
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        window.location.href = buildQuoteEmail(formData);
+        if (!prepareOnly) {
+            trackQuoteAction('quote_email_clicked');
+            window.location.href = buildQuoteEmail(formData);
+        }
+        setCopyMessage('');
         setIsSubmitted(true);
+    };
+
+    const copyBrief = async () => {
+        try {
+            await navigator.clipboard.writeText(buildBrief(formData));
+            setCopyMessage('Brief copied.');
+        } catch {
+            setCopyMessage('Select and copy the text in the brief below.');
+            return;
+        }
+        trackQuoteAction('quote_brief_copied');
     };
 
     return (
         <div id="quote" className="scroll-mt-28 p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-900/60 backdrop-blur-xl border border-white/[0.08] shadow-2xl">
             <div className="flex items-center justify-between mb-5 gap-3">
                 <div>
-                    <h3 className="text-lg sm:text-xl font-black text-white uppercase">Rapid Rate Confirmation</h3>
-                    <p className="text-sm text-slate-400 mt-0.5">Send your shipment details for an availability and rate check.</p>
+                    <h3 className="text-lg sm:text-xl font-black text-white uppercase">{prepareOnly ? 'Shipment details' : 'Rapid Rate Confirmation'}</h3>
+                    <p className="text-sm text-slate-400 mt-0.5">{prepareOnly ? 'Create a brief you can share with your team or email to dispatch.' : 'Send your shipment details for an availability and rate check.'}</p>
                 </div>
-                <span className="bg-sky-500/10 border border-sky-500/20 text-sky-400 px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold flex-shrink-0">
+                {!prepareOnly && <span className="bg-sky-500/10 border border-sky-500/20 text-sky-400 px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold flex-shrink-0">
                     24/7 STATUS
-                </span>
+                </span>}
             </div>
 
             {isSubmitted ? (
-                <div className="p-6 sm:p-8 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-center space-y-3" role="status">
+                <div className="p-4 sm:p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 space-y-3">
                     <div className="w-12 h-12 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center mx-auto">
                         <Check className="w-6 h-6" />
                     </div>
-                    <h4 className="text-base font-bold text-white">Your email is ready to send</h4>
-                    <p className="text-sm text-slate-300 max-w-sm mx-auto leading-relaxed">
-                        Your email app should have opened with the request filled in. Press <strong>Send</strong> to deliver it to
-                        dispatch. If nothing opened, email{' '}
+                    <h4 className="text-base font-bold text-white" role="status">{prepareOnly ? 'Your shipment brief is ready' : 'Your email draft is ready'}</h4>
+                    <p className="text-sm text-slate-300 leading-relaxed">
+                        Copy the brief or open an email draft. Press <strong>Send</strong> in your email app to deliver it to
+                        dispatch. You can also paste the brief into an email to{' '}
                         <a href={`mailto:${SITE.emails.dispatch}`} className="text-sky-400 font-bold underline break-all">
                             {SITE.emails.dispatch}
                         </a>{' '}
                         or call{' '}
-                        <a href={SITE.phones.primary.href} className="text-sky-400 font-bold underline">
+                        <a href={SITE.phones.primary.href} onClick={() => trackQuoteAction('quote_call_clicked')} className="text-sky-400 font-bold underline">
                             {SITE.phones.primary.display}
                         </a>
                         .
                     </p>
+                    <p role="status" className="text-sm text-slate-300">{copyMessage}</p>
+                    <textarea aria-label="Shipment brief" readOnly rows={7} value={buildBrief(formData)} className={inputClass} />
+                    <div className="flex flex-wrap gap-3">
+                        <button type="button" onClick={copyBrief} className="rounded-lg bg-sky-500 px-4 py-2 text-sm font-bold text-slate-950">Copy brief</button>
+                        <a href={buildQuoteEmail(formData)} onClick={() => trackQuoteAction('quote_email_clicked')} className="rounded-lg border border-white/20 px-4 py-2 text-sm font-bold text-sky-300">Open email draft</a>
+                    </div>
                     <button
                         type="button"
                         onClick={() => setIsSubmitted(false)}
@@ -135,12 +169,12 @@ export default function QuoteForm() {
                         </div>
                         <div>
                             <label htmlFor={`${id}-contact`} className="text-xs font-semibold text-slate-300 block mb-1">
-                                Your Phone / Email *
+                                Your Phone / Email {prepareOnly ? '(optional)' : '*'}
                             </label>
                             <input
                                 id={`${id}-contact`}
                                 type="text"
-                                required
+                                required={!prepareOnly}
                                 autoComplete="email"
                                 placeholder="Phone or rate con email"
                                 value={formData.contact}
@@ -150,14 +184,25 @@ export default function QuoteForm() {
                         </div>
                     </div>
 
+                    {prepareOnly && <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label htmlFor={`${id}-dimensions`} className="text-xs font-semibold text-slate-300 block mb-1">Loaded dimensions</label>
+                            <input id={`${id}-dimensions`} type="text" placeholder="48 × 40 × 52 in each" value={formData.dimensions} onChange={update('dimensions')} className={inputClass} />
+                        </div>
+                        <div>
+                            <label htmlFor={`${id}-windows`} className="text-xs font-semibold text-slate-300 block mb-1">Pickup and delivery windows</label>
+                            <input id={`${id}-windows`} type="text" placeholder="Dates, local times and time zones" value={formData.windows} onChange={update('windows')} className={inputClass} />
+                        </div>
+                    </div>}
+
                     <div>
                         <label htmlFor={`${id}-notes`} className="text-xs font-semibold text-slate-300 block mb-1">
-                            Pickup Date, Times & Notes
+                            {prepareOnly ? 'Access, handling and shipment notes' : 'Pickup Date, Times & Notes'}
                         </label>
                         <textarea
                             id={`${id}-notes`}
                             rows={3}
-                            placeholder="Ready date, appointment windows, dims, special handling…"
+                            placeholder={prepareOnly ? 'Heaviest unit, liftgate location, surface, JFK release or other instructions…' : 'Ready date, appointment windows, dims, special handling…'}
                             value={formData.notes}
                             onChange={update('notes')}
                             className={`${inputClass} resize-y`}
@@ -183,10 +228,11 @@ export default function QuoteForm() {
                             className="flex-1 bg-sky-500 hover:bg-sky-400 text-slate-950 font-black py-3.5 px-5 rounded-xl text-xs uppercase tracking-wider transition shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2"
                         >
                             <Send className="w-3.5 h-3.5" />
-                            <span>Email Freight Request</span>
+                            <span>{prepareOnly ? 'Build shipment brief' : 'Email Freight Request'}</span>
                         </button>
                         <a
                             href={SITE.phones.primary.href}
+                            onClick={() => trackQuoteAction('quote_call_clicked')}
                             className="bg-white/[0.05] hover:bg-white/[0.08] border border-white/[0.08] text-slate-200 text-xs font-semibold px-4 py-3.5 rounded-xl transition flex items-center justify-center gap-1.5"
                         >
                             <Phone className="w-3.5 h-3.5 text-sky-400" />
@@ -195,7 +241,7 @@ export default function QuoteForm() {
                     </div>
 
                     <p className="text-xs text-slate-500 leading-relaxed">
-                        Submitting opens your email app with these details addressed to {SITE.emails.dispatch}. Nothing is
+                        {prepareOnly ? 'The brief is created in this browser. Emailing it is optional.' : `Submitting opens your email app with these details addressed to ${SITE.emails.dispatch}.`} Nothing is
                         stored on this website. See our{' '}
                         <Link href="/privacy-policy" className="underline hover:text-slate-300">
                             Privacy Policy

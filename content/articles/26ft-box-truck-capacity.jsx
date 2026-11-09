@@ -14,7 +14,7 @@ export const meta = {
 export default function Article() {
     return (
         <>
-            <p>For an editable floor-space estimate, use the <Link href="/tools/pallet-calculator">box truck pallet calculator</Link>. Confirm actual equipment limits with dispatch before booking.</p>
+            <p>For an editable floor-space estimate, use the <Link href="/tools/pallet-calculator">box truck pallet calculator</Link>. If you are booking a <Link href="/services/box-truck-freight">dedicated box truck</Link>, confirm actual equipment limits with dispatch.</p>
             <p>
                 The 26ft straight box truck is the workhorse of regional and expedited freight. It is big enough to carry a
                 meaningful load of pallets, small enough to reach city storefronts and tight receiving areas, and, with a

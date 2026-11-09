@@ -57,7 +57,8 @@ export default function PrivacyPolicyPage() {
                             <strong>Google measurement.</strong> We use Google Tag Manager to load our configured Google
                             Analytics tag. Google Analytics may process page addresses, referrers, browser and device
                             information, approximate location and interactions, and may use cookies or identifiers according
-                            to the tag and consent settings. We do not send quote-form fields to Google Analytics. See{' '}
+                            to the tag and consent settings. Measurement events can include shipment brief copies, email draft
+                            clicks and call clicks. We do not send the brief or quote-form fields to Google Analytics. See{' '}
                             <a href="https://policies.google.com/technologies/partner-sites" {...ext}>how Google uses information from sites using its services</a>.
                         </li>
                         <li>

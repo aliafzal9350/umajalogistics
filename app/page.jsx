@@ -72,19 +72,19 @@ const SERVICES = [
         icon: Clock,
         title: 'Expedited & Dedicated Runs',
         text: 'Your freight is the only freight on the truck, moving straight from pickup to delivery with no terminal transfers.',
-        href: '/services#expedited',
+        href: '/services/box-truck-freight',
     },
     {
         icon: Plane,
         title: 'JFK Air Cargo Trucking',
         text: 'Daily runs to airline and handler terminals for export tenders, import recoveries and forwarder transfers.',
-        href: '/services#air-cargo',
+        href: '/services/jfk-air-cargo-trucking',
     },
     {
         icon: Layers,
         title: 'Liftgate Deliveries',
         text: 'Ground-level pickups and deliveries for storefronts, offices and job sites without a loading dock.',
-        href: '/services#liftgate',
+        href: '/services/liftgate-delivery',
     },
     {
         icon: Warehouse,

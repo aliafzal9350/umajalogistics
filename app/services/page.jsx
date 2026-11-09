@@ -8,6 +8,7 @@ export const metadata = pageMetadata('Freight Services', 'Expedited box truck fr
 const SERVICES = [
     {
         id: 'expedited',
+        details: '/services/box-truck-freight',
         icon: Clock,
         title: 'Expedited & Dedicated Runs',
         intro:
@@ -21,6 +22,7 @@ const SERVICES = [
     },
     {
         id: 'air-cargo',
+        details: '/services/jfk-air-cargo-trucking',
         icon: Plane,
         title: 'JFK Air Cargo Trucking',
         intro:
@@ -34,6 +36,7 @@ const SERVICES = [
     },
     {
         id: 'liftgate',
+        details: '/services/liftgate-delivery',
         icon: Layers,
         title: 'Liftgate & Ground-Level Delivery',
         intro:
@@ -42,7 +45,7 @@ const SERVICES = [
             'Storefronts, offices, schools, construction sites and small workshops receive freight at street level. Our driver lowers each pallet to the ground and moves it off the truck with the onboard pallet jack, so the site does not need equipment of its own.',
             'Tell us at quote time which ends need the liftgate. We will confirm the pallet weights are within the gate’s rating and that the drop location suits a pallet jack.',
         ],
-        idealFor: ['No dock or forklift on site', 'Retail and office deliveries', 'Job sites and grade-level doors', 'Pallets up to the liftgate rating'],
+        idealFor: ['No dock or forklift on site', 'Retail and office deliveries', 'Job sites and grade-level doors', 'Pallets that fit the assigned gate and combined load limit'],
         guide: { href: '/resources/liftgate-delivery-guide', label: 'Liftgate delivery explained' },
     },
     {
@@ -104,7 +107,7 @@ export default function ServicesPage() {
             </PageHeader>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 space-y-6">
-                {SERVICES.map(({ id, icon: Icon, title, intro, body, idealFor, guide }) => (
+                {SERVICES.map(({ id, icon: Icon, title, intro, body, idealFor, guide, details }) => (
                     <section
                         key={id}
                         id={id}
@@ -123,6 +126,7 @@ export default function ServicesPage() {
                                     {paragraph}
                                 </p>
                             ))}
+                            {details && <Link href={details} className="mt-4 inline-block text-sm font-bold text-sky-400 underline">Plan your {title.toLowerCase()} shipment</Link>}
                             <p className="mt-4 text-sm">
                                 <span className="text-slate-500">Read the guide: </span>
                                 <Link href={guide.href} className="text-sky-400 hover:text-sky-300 underline underline-offset-2">
