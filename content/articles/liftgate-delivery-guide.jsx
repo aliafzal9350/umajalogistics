@@ -82,11 +82,6 @@ export default function Article() {
                     Freight heavier than the rating needs a dock, a forklift or a different plan.
                 </li>
                 <li>
-                    <strong>Carry freight inside.</strong> A liftgate delivers to the ground at the back of the truck.
-                    Bringing freight inside, upstairs or to a specific room is “inside delivery,” a separate service that
-                    should be arranged in advance.
-                </li>
-                <li>
                     <strong>Work on any surface.</strong> A pallet jack needs a firm, smooth, reasonably level surface.
                     Gravel, grass, soft ground, steep driveways and broken pavement can make a move unsafe or impossible.
                 </li>
@@ -95,6 +90,18 @@ export default function Article() {
                     from the side being moved. Crates on skids or loose pieces may need to be palletized first.
                 </li>
             </ul>
+
+            <h2>Inside delivery vs. liftgate delivery</h2>
+            <p>
+                Liftgate service lowers the pallet to ground level. Inside delivery describes where the carrier agrees to
+                take it after unloading. Residential delivery describes the type of address. A shipment can need more
+                than one of these services, so ask the carrier to confirm each one and the exact handoff point.
+            </p>
+            <p>
+                For example, a receiver who can collect a pallet from a level driveway may only need the truck to lower it.
+                If the pallet must go through a doorway, give the carrier the door width, threshold and path to the receiving
+                point before booking. Confirm whether the carrier can provide that service and whether it costs extra.
+            </p>
 
             <h2>Preparing a site without a dock</h2>
             <ol>
@@ -134,12 +141,17 @@ export default function Article() {
                 further into wrapping, labeling and paperwork.
             </p>
 
-            <h2>Liftgate service and your quote</h2>
+            <h2>What is a liftgate delivery charge?</h2>
             <p>
                 Carriers and brokers usually price liftgate service as an accessorial, an extra charge on top of the line-haul
                 rate. Problems arise when a shipment is booked as dock-to-dock and the driver arrives at a storefront: the stop
                 may be refused, rescheduled or billed differently. The fix is simple. Tell dispatch at quote time which ends
                 need a liftgate so it is written into the rate confirmation and the right equipment is assigned.
+            </p>
+            <p>
+                Ask whether the liftgate is included in the quote or listed separately, and whether the price covers pickup,
+                delivery or both. Check any residential, limited access or inside delivery charges separately so you can
+                compare quotes for the same work.
             </p>
             <p>
                 Have a delivery that needs a liftgate? Review <Link href="/services/liftgate-delivery">Umaja’s liftgate delivery service</Link>, then <Link href="/contact">send us the details</Link> and we will confirm
