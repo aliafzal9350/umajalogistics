@@ -85,7 +85,8 @@ export default function Article() {
                 <thead>
                     <tr>
                         <th>Factor</th>
-                        <th>LTL</th>
+                        <th>Standard LTL</th>
+                        <th>Expedited LTL</th>
                         <th>Dedicated expedited</th>
                     </tr>
                 </thead>
@@ -93,31 +94,37 @@ export default function Article() {
                     <tr>
                         <td>Freight on the truck</td>
                         <td>Shared with other shippers</td>
+                        <td>Can be shared</td>
                         <td>Yours only</td>
                     </tr>
                     <tr>
                         <td>Terminal transfers</td>
                         <td>Usually several</td>
+                        <td>Ask which terminals the shipment uses</td>
                         <td>None</td>
                     </tr>
                     <tr>
                         <td>Typical transit</td>
                         <td>Days</td>
+                        <td>Compare the carrier’s faster service for your lane</td>
                         <td>Hours to overnight on regional lanes</td>
                     </tr>
                     <tr>
                         <td>Delivery precision</td>
                         <td>Delivery date, sometimes a window</td>
+                        <td>Confirm what date or window is committed</td>
                         <td>Scheduled pickup and delivery times</td>
                     </tr>
                     <tr>
                         <td>Pricing basis</td>
                         <td>Class, weight, distance, accessorials</td>
+                        <td>Compare the expedited charge and any guarantee terms</td>
                         <td>Distance, equipment, accessorials</td>
                     </tr>
                     <tr>
                         <td>Best for</td>
                         <td>1–4 pallets, flexible timing</td>
+                        <td>Partial loads with tighter delivery windows</td>
                         <td>Deadlines, fragile or high-value freight, 4–12 pallets</td>
                     </tr>
                 </tbody>

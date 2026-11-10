@@ -35,7 +35,7 @@ export default function Article() {
                 </ul>
             </div>
 
-            <h2>Interior dimensions: what you actually get</h2>
+            <h2>What are the interior dimensions of a 26ft box truck?</h2>
             <p>
                 Our trucks have a box that is 26 feet long with roughly 95 inches of interior width and 95 inches of interior
                 height. Exact figures vary by body manufacturer, so it is worth asking any carrier for the inside measurements
@@ -107,6 +107,14 @@ export default function Article() {
                 stay under the door clearance, stacking can increase the count. But stacking almost always pushes you into
                 the weight limit described below, and many products, including beverages, appliances and anything marked “Do
                 Not Stack,” should never be stacked. Tell dispatch whether your freight is stackable; do not assume.
+            </p>
+
+            <h2>How many pallets fit in a 24ft box truck?</h2>
+            <p>
+                With a measured floor of 288 × 90 inches, twelve 48 × 40-inch pallets can fit in six rows of two on paper.
+                Those rows use all 288 inches. If the usable floor length is 287 inches, only five complete rows fit in that
+                orientation. A 312-inch floor gives the same six rows 24 inches of nominal room before obstructions.
+                Measure the assigned truck and account for overhang, securement and working clearance before booking.
             </p>
 
             <h2>Weight: the limit that usually matters first</h2>

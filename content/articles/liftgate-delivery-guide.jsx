@@ -2,10 +2,11 @@ import Link from 'next/link';
 
 export const meta = {
     slug: 'liftgate-delivery-guide',
-    title: 'Liftgate Delivery Explained: When You Need One and How to Prepare',
+    title: 'What Is Liftgate Delivery and When Do You Need It?',
     description:
         'What a truck liftgate does, when a delivery needs one, what it cannot do, and a checklist for preparing a pickup or delivery site without a loading dock.',
     published: '2026-10-30',
+    updated: '2026-11-10',
     readingMinutes: 6,
     category: 'Delivery',
 };
@@ -14,17 +15,16 @@ export default function Article() {
     return (
         <>
             <p>
-                Most warehouses have loading docks: raised platforms built so a truck’s cargo floor lines up with the building
-                floor and pallets roll straight across. Plenty of shipping and receiving locations do not. Storefronts,
-                offices, schools, job sites, small workshops and many urban buildings receive freight at street level. For
-                those stops, the truck needs a liftgate.
+                Liftgate delivery uses a powered platform on the truck to lower freight from the cargo floor to ground level.
+                If a quote says “liftgate required,” ask whether that applies at pickup, delivery or both. A storefront that
+                receives pallets at ground level may need a liftgate even when the shipper loads from a dock.
             </p>
 
             <div className="callout">
                 <p className="callout-title">In short</p>
                 <ul>
                     <li>A liftgate is a powered platform that lowers freight from truck-floor height to the ground.</li>
-                    <li>You need one at any pickup or delivery without a dock or forklift.</li>
+                    <li>Request one when there is neither a compatible dock nor suitable equipment to unload the truck.</li>
                     <li>Each lift must stay within the gate’s rated capacity, and the surface must suit a pallet jack.</li>
                     <li>Ask for liftgate service when you request a quote, not on the day of delivery.</li>
                 </ul>
@@ -55,7 +55,7 @@ export default function Article() {
             </p>
 
             <h2>When you need a liftgate</h2>
-            <p>Request liftgate service if any of these apply at pickup or delivery:</p>
+            <p>Check these conditions at each stop before deciding whether to request a liftgate:</p>
             <ul>
                 <li>There is no loading dock, or the dock is not usable for a straight truck.</li>
                 <li>There is no forklift, or no one available to operate one.</li>
@@ -64,6 +64,11 @@ export default function Article() {
                     The receiving door is at ground level, sometimes called a “drive-in” or “grade-level” door.
                 </li>
             </ul>
+            <p>
+                A liftgate addresses the change in height between the truck and the ground. If you need the pallet moved
+                through a doorway or into a stockroom, confirm that handoff separately. Tell dispatch about slopes, thresholds
+                and how far the pallet needs to travel.
+            </p>
             <p>
                 Standard dock height is roughly 48 to 52 inches, which matches a dock-high box truck. If a location has a
                 dock, liftgate service usually is not needed. If you are not sure, ask the receiver directly: “Do you have a

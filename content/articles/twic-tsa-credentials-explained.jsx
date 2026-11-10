@@ -2,10 +2,11 @@ import Link from 'next/link';
 
 export const meta = {
     slug: 'twic-tsa-credentials-explained',
-    title: 'TWIC and TSA Credentials in Trucking: What They Mean for Your Freight',
+    title: 'What Is a TWIC Card for Truck Drivers?',
     description:
         'A plain-English explanation of the TWIC card for port access and TSA security requirements for air cargo drivers, and why they matter when you choose a carrier.',
     published: '2026-10-30',
+    updated: '2026-11-10',
     readingMinutes: 6,
     category: 'Compliance',
 };
@@ -14,11 +15,10 @@ export default function Article() {
     return (
         <>
             <p>
-                Seaports and airports are secure facilities. A truck that shows up without the right credentials can be turned
-                away at the gate, held for an escort, or simply unable to touch the freight. For shippers and forwarders
-                moving cargo through these facilities, the carrier’s credentials are as practical a consideration as the size
-                of the truck. This article explains the two you will hear about most: the TWIC card and TSA air cargo security
-                requirements.
+                Truck drivers use a TWIC card when they need unescorted access to secure areas of regulated maritime
+                facilities or vessels. For a port pickup, ask which facility the truck must enter, whether its pickup area
+                requires TWIC, and what registration or appointment the terminal requires. For air cargo, confirm the
+                handler’s access requirements separately. See the <a href="https://www.tsa.gov/for-industry/twic">TSA’s TWIC guidance</a>.
             </p>
             <p className="text-sm text-slate-400">
                 This is general information, not legal advice. Security rules change, so confirm current requirements with the

@@ -6,7 +6,7 @@ export const meta = {
     description:
         'How export deliveries, import recoveries and transfers work at JFK Airport cargo terminals, what paperwork and security steps apply, and how to avoid delays.',
     published: '2026-10-30',
-    updated: '2026-11-06',
+    updated: '2026-11-10',
     readingMinutes: 10,
     category: 'Air Cargo',
 };
@@ -164,7 +164,7 @@ export default function Article() {
                 <li>Delivery address, appointment window, unloading equipment and a reachable receiver.</li>
                 <li>Who can approve a revised plan if the cargo, timing or delivery conditions change.</li>
             </ul>
-            <h2>Check the exact facility rather than the airport name</h2>
+            <h2>How to find the right JFK cargo terminal for pickup</h2>
             <p>
                 JFK has multiple cargo facilities. An airline’s general address, passenger terminal and freight pickup
                 point are not interchangeable. For example, the official <a href="https://www.aacargo.com/AACargo/ua/facilities/JFK" target="_blank" rel="noopener noreferrer">American Airlines Cargo JFK facility page</a> separates
