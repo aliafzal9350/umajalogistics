@@ -6,7 +6,7 @@ export const meta = {
     description:
         'Pallet math, payload limits, cube and liftgate ratings for a 26ft straight box truck, plus the details dispatch needs to quote your load correctly.',
     published: '2026-10-30',
-    updated: '2026-11-04',
+    updated: '2026-11-10',
     readingMinutes: 7,
     category: 'Equipment',
 };
@@ -14,7 +14,8 @@ export const meta = {
 export default function Article() {
     return (
         <>
-            <p>For an editable floor-space estimate, use the <Link href="/tools/pallet-calculator">box truck pallet calculator</Link>. If you are booking a <Link href="/services/box-truck-freight">dedicated box truck</Link>, confirm actual equipment limits with dispatch.</p>
+            <p>A 26ft box truck can fit <strong>12 standard 48 × 40-inch pallets</strong> in six rows of two when the usable floor is about 312 × 95 inches and the freight stays within each pallet’s footprint. Check a different size with the <Link href="/tools/pallet-calculator">box truck pallet calculator</Link>.</p>
+            <p>For example, 12 pallets at 850 lb each weigh 10,200 lb. They can fit the example floor layout and still exceed a truck with 10,000 lb of available payload. Confirm actual payload and rear-door clearance with dispatch when booking a <Link href="/services/box-truck-freight">dedicated box truck</Link>.</p>
             <p>
                 The 26ft straight box truck is the workhorse of regional and expedited freight. It is big enough to carry a
                 meaningful load of pallets, small enough to reach city storefronts and tight receiving areas, and, with a

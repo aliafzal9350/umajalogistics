@@ -2,10 +2,11 @@ import Link from 'next/link';
 
 export const meta = {
     slug: 'expedited-vs-ltl',
-    title: 'Expedited Freight vs. LTL: Which Service Fits Your Shipment?',
+    title: 'Expedited LTL vs. Dedicated Freight: Which Fits Your Shipment?',
     description:
         'How less-than-truckload and dedicated expedited trucking differ in transit time, handling, pricing and risk, and a simple way to decide between them.',
     published: '2026-10-30',
+    updated: '2026-11-10',
     readingMinutes: 6,
     category: 'Shipping Tips',
 };
@@ -14,10 +15,20 @@ export default function Article() {
     return (
         <>
             <p>
-                When a shipment is too big for parcel but does not fill a 53-foot trailer, shippers usually choose between two
-                services: <strong>less-than-truckload (LTL)</strong> and <strong>dedicated expedited</strong> trucking. Both
-                move pallets, but they work very differently, and the cheaper option on paper is not always the cheaper option
-                once deadlines and damage risk are counted.
+                A pallet shipment can move by standard less-than-truckload (LTL), expedited LTL or a dedicated truck. Start with
+                the latest time the receiver can accept the freight, then compare what each carrier can commit to in writing.
+            </p>
+
+            <h2>What is expedited less-than-truckload shipping?</h2>
+            <p>
+                Expedited LTL is a faster service option for a shipment that uses part of a truck. It can still share trailer
+                space with other freight and pass through terminals. Ask whether the quote includes a delivery date, a specific
+                appointment window, or an estimated transit time. Also ask what happens if the carrier misses that commitment.
+            </p>
+            <p>
+                For example, if two pallets must reach a store by Friday at noon, compare quotes using that exact cutoff.
+                Give both carriers the receiving hours and any liftgate or appointment requirements so the quotes cover the
+                same handoff. If terminal transfers would cause a problem, ask whether the proposed move is direct.
             </p>
 
             <h2>How LTL works</h2>
