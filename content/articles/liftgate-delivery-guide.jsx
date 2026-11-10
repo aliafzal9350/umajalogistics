@@ -137,7 +137,7 @@ export default function Article() {
                 need a liftgate so it is written into the rate confirmation and the right equipment is assigned.
             </p>
             <p>
-                Have a delivery that needs a liftgate? <Link href="/contact">Send us the details</Link> and we will confirm
+                Have a delivery that needs a liftgate? Review <Link href="/services/liftgate-delivery">Umaja’s liftgate delivery service</Link>, then <Link href="/contact">send us the details</Link> and we will confirm
                 the plan before the truck rolls.
             </p>
 
