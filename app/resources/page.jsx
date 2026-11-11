@@ -15,7 +15,7 @@ export default function ResourcesPage() {
                 description="Straightforward answers to the questions shippers, forwarders and brokers ask us every week, written by the team that runs the trucks."
             />
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16">
-                <aside className="mb-8 rounded-2xl border border-sky-400/25 bg-sky-400/5 p-6"><h2 className="text-xl font-bold text-white">Plan your pallet layout</h2><p className="text-slate-300 mt-2">Estimate floor positions and compare weight and height with confirmed truck limits.</p><Link href="/tools/pallet-calculator" className="inline-block mt-4 text-sky-400 underline">Open the pallet calculator →</Link></aside>
+                <aside className="mb-8 rounded-2xl border border-sky-400/25 bg-sky-400/5 p-6"><h2 className="text-xl font-bold text-white">Plan your pallet layout</h2><p className="text-slate-300 mt-2">Estimate floor positions and compare weight and height with confirmed truck limits.</p><Link href="/tools/pallet-calculator" className="inline-block mt-4 text-sky-400 underline">Open the pallet calculator →</Link><Link href="/tools/freight-density-calculator" className="block mt-2 text-sky-400 underline">Freight density &amp; class calculator →</Link></aside>
                 <aside className="mb-8 rounded-2xl border border-sky-400/25 bg-sky-400/5 p-6">
                     <h2 className="text-xl font-bold text-white">Prepare a shipment brief</h2>
                     <p className="mt-2 text-slate-300">Collect your route, pallet details and receiving requirements in a brief you can copy or email.</p>
