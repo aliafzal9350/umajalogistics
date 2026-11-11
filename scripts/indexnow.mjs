@@ -9,11 +9,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
 
 const origin = (process.argv[2] || '').replace(/\/$/, '');
 if (!/^https:\/\//.test(origin)) { console.error('Usage: node scripts/indexnow.mjs https://canonical-origin'); process.exit(1); }
 const enabled = process.env.INDEXNOW_ENABLED === '1';
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Z]:)/, '$1')), '..');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const keyFile = fs.readdirSync(path.join(root, 'public')).find(f => /^[a-f0-9]{32}\.txt$/.test(f));
 if (!keyFile) { console.error('No IndexNow key file (public/<32 hex>.txt) found.'); process.exit(1); }
 const key = keyFile.slice(0, -4);
