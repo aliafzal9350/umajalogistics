@@ -3,7 +3,7 @@ import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import { SITE } from '@/lib/site';
 
-export const metadata = pageMetadata('Privacy Policy', 'How Umaja Logistics handles website data, freight inquiries, analytics and advertising information.', '/privacy-policy');
+export const metadata = pageMetadata('Privacy Policy', 'How Umaja Logistics handles website data, freight quote inquiries, analytics, cookies and advertising information, and the choices you have.', '/privacy-policy');
 
 const ext = { target: '_blank', rel: 'noopener noreferrer' };
 
@@ -104,8 +104,8 @@ export default function PrivacyPolicyPage() {
                             </a>
                             . Alternatively, you can opt out of a third-party vendor’s use of cookies for personalized advertising by
                             visiting{' '}
-                            <a href="https://www.aboutads.info/choices" {...ext}>
-                                www.aboutads.info/choices
+                            <a href="https://optout.aboutads.info/" {...ext}>
+                                optout.aboutads.info
                             </a>
                             {' '}or, in Europe,{' '}
                             <a href="https://www.youronlinechoices.eu" {...ext}>

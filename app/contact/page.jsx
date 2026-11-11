@@ -4,7 +4,7 @@ import PageHeader from '@/components/PageHeader';
 import ContactSection from '@/components/ContactSection';
 import { SITE, mailto } from '@/lib/site';
 
-export const metadata = pageMetadata('Contact & Get a Quote', 'Request a box truck freight quote, carrier packet or JFK cargo run. Call Umaja dispatch at (646) 973-6672.', '/contact');
+export const metadata = pageMetadata('Contact & Get a Quote', 'Request a box truck freight quote, carrier packet or JFK air cargo run. Call Umaja dispatch at (646) 973-6672 or send your shipment details online.', '/contact');
 
 export default function ContactPage() {
     return (

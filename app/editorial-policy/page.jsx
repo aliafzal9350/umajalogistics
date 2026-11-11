@@ -3,7 +3,7 @@ import PageHeader from '@/components/PageHeader';
 import { SITE } from '@/lib/site';
 import { pageMetadata } from '@/lib/metadata';
 
-export const metadata = pageMetadata('About Our Freight Guides', 'Publisher information, source checks and corrections for Umaja Logistics freight planning guides.', '/editorial-policy');
+export const metadata = pageMetadata('About Our Freight Guides', 'Who publishes the Umaja Logistics freight guides, how sources are checked, how commercial interests are disclosed and how to request corrections.', '/editorial-policy');
 
 export default function EditorialPolicy() {
   return <>

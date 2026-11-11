@@ -115,14 +115,8 @@ export default function SiteFooter() {
                         “2003 GMC TopKick C6500”
                     </a>{' '}
                     by{' '}
-                    <a
-                        href="https://sketchfab.com/ddiaz-design"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-slate-300"
-                    >
-                        Ddiaz Design
-                    </a>
+                    {/* Author profile URL returned HTTP 500 (Nov 2026); credit kept as text, model link above still works. */}
+                    <span>Ddiaz Design</span>
                     , licensed under{' '}
                     <a
                         href="https://creativecommons.org/licenses/by-nc-sa/4.0/"

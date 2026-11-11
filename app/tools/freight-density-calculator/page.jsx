@@ -6,7 +6,7 @@ import { pageMetadata } from '@/lib/metadata';
 import { DENSITY_TIERS } from '@/lib/freight-density';
 import { SITE } from '@/lib/site';
 
-export const metadata = pageMetadata('Freight Density & Class Calculator (LTL)', 'Free freight density calculator: enter pallet dimensions and weight to get pounds per cubic foot and an estimated LTL freight class on the 2025 NMFC density scale.', '/tools/freight-density-calculator');
+export const metadata = pageMetadata('Freight Density & Class Calculator (LTL)', 'Free freight density calculator: enter pallet dimensions and weight to get pounds per cubic foot and an estimated LTL class on the 2025 NMFC scale.', '/tools/freight-density-calculator');
 
 const faqs = [
     ['How do you calculate freight density?', 'Multiply length × width × height in inches, divide by 1,728 to get cubic feet, then divide the total weight in pounds by the total cubic feet. The result is pounds per cubic foot (PCF).'],
