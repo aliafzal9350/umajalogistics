@@ -111,7 +111,8 @@ export default function Article() {
                 class. Measure length, width and height at the widest points, including the pallet. Weigh each pallet if you
                 can; estimates tend to run low. Wrong numbers lead to re-quotes, refused freight or a truck that cannot take
                 the load. Our article on <Link href="/resources/26ft-box-truck-capacity">26ft box truck capacity</Link>{' '}
-                explains why weight per pallet matters as much as total weight.
+                explains why weight per pallet matters as much as total weight, and the{' '}
+                <Link href="/tools/freight-density-calculator">freight density calculator</Link> turns your measurements into an estimated LTL class.
             </p>
 
             <h2>6. Get the paperwork right</h2>

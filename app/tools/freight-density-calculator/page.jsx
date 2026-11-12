@@ -17,7 +17,16 @@ const faqs = [
 const toolSchema = {
     '@context': 'https://schema.org',
     '@graph': [
-        { '@type': 'WebApplication', name: 'Freight density and class calculator', url: `${SITE.url}/tools/freight-density-calculator`, applicationCategory: 'BusinessApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' } },
+        // WebApplication was dropped: Google requires aggregateRating or review for it, and we have neither.
+        {
+            '@type': 'WebPage', '@id': `${SITE.url}/tools/freight-density-calculator`, url: `${SITE.url}/tools/freight-density-calculator`,
+            name: 'Freight density and class calculator', isAccessibleForFree: true,
+            breadcrumb: { '@type': 'BreadcrumbList', itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE.url}/` },
+                { '@type': 'ListItem', position: 2, name: 'Resources', item: `${SITE.url}/resources` },
+                { '@type': 'ListItem', position: 3, name: 'Freight density calculator' },
+            ] },
+        },
         { '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     ],
 };

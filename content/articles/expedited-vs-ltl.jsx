@@ -51,7 +51,8 @@ export default function Article() {
                 <li>
                     <strong>Pricing by class and weight.</strong> LTL rates depend on freight classification, weight, distance
                     and accessorial services such as liftgate or residential delivery. Inaccurate dimensions or weights often
-                    lead to reweigh and reclassification charges after the fact.
+                    lead to reweigh and reclassification charges after the fact. Estimate your class first with the{' '}
+                    <Link href="/tools/freight-density-calculator">freight density calculator</Link>.
                 </li>
             </ul>
 
